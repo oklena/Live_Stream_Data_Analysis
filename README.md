@@ -7,9 +7,13 @@ My project is making predictions of number new followers using machine learning 
 
 # Exploratory Data Analysis
 This graph shows that followers gained reaches pick at around 50000 minutes which is equal to 35 days. A streamer can gain a good amount of new followers in about 1 month with quality content.
+
 ![image](https://github.com/oklena/Live_Stream_Data_Analysis/tree/main/reports/figures/StreamTimevsFollowersgained.jpg)
+
 Since it is an American platform, English is the most popular language, but Korean and Russian are getting popular. 
+
 ![image](https://github.com/oklena/Live_Stream_Data_Analysis/tree/main/reports/figures/Languages.jpg)
+
 Streamers on twitch.tv have options. They can turn on Mature content if they are targeting adult audience, I am assuming viewers should be older than 18 years old. From the graph you can see that most of the streamers don’t have this option on, but they should be careful with their vocabulary. 
 ![image](https://github.com/oklena/Live_Stream_Data_Analysis/tree/main/reports/figures/Mature.jpg)
 This data on top 1000 streamers, so most of them are partnering with twitch. They pay some percentage of their earnings to twitch.tv.
