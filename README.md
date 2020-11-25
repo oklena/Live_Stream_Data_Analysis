@@ -8,24 +8,32 @@ My project is making predictions of number new followers using machine learning 
 # Exploratory Data Analysis
 This graph shows that followers gained reaches pick at around 50000 minutes which is equal to 35 days. A streamer can gain a good amount of new followers in about 1 month with quality content.
 
-![image](https://github.com/oklena/Live_Stream_Data_Analysis/tree/main/reports/figures/StreamTimevsFollowersgained.jpg)
+![image](https://github.com/oklena/Live_Stream_Data_Analysis/tree/main/reports/figures/StreamTimevsFollowersgained.png)
 
 Since it is an American platform, English is the most popular language, but Korean and Russian are getting popular. 
 
-![image](https://github.com/oklena/Live_Stream_Data_Analysis/tree/main/reports/figures/Languages.jpg)
+![image](https://github.com/oklena/Live_Stream_Data_Analysis/tree/main/reports/figures/Languages.png)
 
 Streamers on twitch.tv have options. They can turn on Mature content if they are targeting adult audience, I am assuming viewers should be older than 18 years old. From the graph you can see that most of the streamers don’t have this option on, but they should be careful with their vocabulary. 
-![image](https://github.com/oklena/Live_Stream_Data_Analysis/tree/main/reports/figures/Mature.jpg)
+
+![image](https://github.com/oklena/Live_Stream_Data_Analysis/tree/main/reports/figures/Mature.png)
+
 This data on top 1000 streamers, so most of them are partnering with twitch. They pay some percentage of their earnings to twitch.tv.
-![image](https://github.com/oklena/Live_Stream_Data_Analysis/tree/main/reports/figures/Partnered.jpg)
+
+![image](https://github.com/oklena/Live_Stream_Data_Analysis/tree/main/reports/figures/Partnered.png)
+
 Target is exponential.
-![image](https://github.com/oklena/Live_Stream_Data_Analysis/tree/main/reports/figures/Target_Dist.jpg)
+
+![image](https://github.com/oklena/Live_Stream_Data_Analysis/tree/main/reports/figures/Target_Dist.png)
 
 # Modeling 
-![image](https://github.com/oklena/Live_Stream_Data_Analysis/tree/main/reports/figures/Models_performances.jpg)
+
+![image](https://github.com/oklena/Live_Stream_Data_Analysis/tree/main/reports/figures/Models_performances.png)
+
 Poisson Regressor model is predicting correctly ½ time. MAPE (Mean Absolute Percentage Error) is negative, so it is hard to interpret. 5 important features are Watch Time, Folowers, Language, Partnered and Peak viewers.
-![image](https://github.com/oklena/Live_Stream_Data_Analysis/tree/main/reports/figures/PR_5_feature_importances.jpg)
-![image](https://github.com/oklena/Live_Stream_Data_Analysis/tree/main/reports/figures/Poisson_Model_performances.jpg)
+
+![image](https://github.com/oklena/Live_Stream_Data_Analysis/tree/main/reports/figures/PR_5_feature_importances.png)
+![image](https://github.com/oklena/Live_Stream_Data_Analysis/tree/main/reports/figures/Poisson_Model_performances.png)
 
 # Conclusion
 Longer people watch, most likely they will start following.
