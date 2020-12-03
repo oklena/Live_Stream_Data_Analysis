@@ -38,8 +38,6 @@ My base data, which is the Top Streamers on Twitch dataset, comes with seven num
 # Exploratory Data Analysis
 
 Distribution of stream time, which is the total amount of minutes channel owners spent streaming. Most of the channels spent about 100,000min streaming whish is equal to about 70days.
-![image_stream](reports/figures/Stream_time_dist.png)
-
 Correlation between number of followers channels already had in units of millions versus followers gained a number of new followers. Even though we can  notice that having a higher number of followers can help to gain proportionally higher number of new followers, it is not true for many.
 For example, some channels had 1,000,000 followers as starting point, but it did not help them to gain more followers.
 ![image1](reports/figures/FollowersvsFollowersgained.png)
@@ -54,7 +52,6 @@ This data on top 1000 streamers, so most of them are partnering with twitch. The
 ![image4](reports/figures/Partnered.png)
 
 Target is exponential.
-![image_target](reports/figures/Target_Dist.png)
 
 # The Models 
 
