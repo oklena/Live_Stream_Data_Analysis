@@ -61,6 +61,7 @@ Target is exponential.
 I ran 4 shallow models using Linear Regression, Random Forest Regressor, Poisson Regressor and K-Nearest Neighbor Regressor. Grid search was used to find the best hypertuning parameters for my models. Poisson Regression model performed better than other models capturing 50.0% on a variation in a test data. It means the model tracking predicting . 
 
 ### Linear Regression Model
+
 Linear regression was used as my first simple model. It is designed to compare the conditional probabilities of many independent features and then uses those calculations to find the total conditional probability of the target feature. The first linear model had mean absolute percentage error of 156.25 and coefficient of determination of 38%. It is lower than 50%, model did not perform well. The remaining 62% of the variability of the dependent variable has not beem accounted for. 
 
 
