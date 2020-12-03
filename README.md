@@ -36,26 +36,24 @@ The data can most easily be uploaded to a notebook using the Pandas read .csv me
 My base data, which is the Top Streamers on Twitch dataset, comes with seven numerical columns, two boolean, and two categorical values, with every row being a separate channel. The first column contains the channel name. The second column is the total amount of time in minutes in aggregate that viewers spend watching the channel videos. The third column is the total amount of minutes the channel owner spends streaming. The column "peak viewers" indicates the highest number of concurrent viewers who viewed channel's live video for at least 3 seconds. The next column is the average number of concurrent viewers in a stream calculated by taking a total of the number of viewers of a stream at different points in time when streaming live. Next column is number of channels' followers. Followers gained is the target column – number of new followers. Views gained is the number of latest views. Partnered is true if a channel partnered with Twitch, otherwise is false. Mature is true if a channel has mature content, otherwise is false. The last column shows language a channel speaking. 
 
 # Exploratory Data Analysis
-This graph shows that followers gained reaches pick at around 50000 minutes which is equal to 35 days. A streamer can gain a good amount of new followers in about 1 month with a quality content.
 
-![image1](reports/figures/StreamTimevsFollowersgained.png)
+Distribution of stream time, which is the total amount of minutes channel owners spent streaming. Most of the channels spent about 100,000min streaming whish is equal to about 70days.
+![image1](reports/figures/Stream_time_distpng)
 
+Correlation between number of followers channels already had in units of millions versus followers gained a number of new followers. Even though we can  notice that having a higher number of followers can help to gain proportionally higher number of new followers, it is not true for many.
+For example, some channels had 1,000,000 followers as starting point, but it did not help them to gain more followers.
 ![image1](reports/figures/FollowersvsFollowersgained.png)
 
-Since it is an American platform, English is the most popular language, but Korean and Russian are getting popular. 
-
+Since it is an American platform, English is the most popular language, but they are getting popular in Korea and among Russian speaking countries. Still the gap between English and other languages is huge, so plenty of room for them to expand further. 
 ![image2](reports/figures/Languages.png)
 
 Streamers on twitch.tv have options. They can turn on Mature content if they are targeting adult audience, I am assuming viewers should be older than 18 years old. From the graph you can see that most of the streamers don’t have this option on, but they should be careful with their vocabulary. 
-
 ![image3](reports/figures/Mature.png)
 
 This data on top 1000 streamers, so most of them are partnering with twitch. They pay some percentage of their earnings to Twitch.
-
 ![image4](reports/figures/Partnered.png)
 
 Target is exponential.
-
 ![image5](reports/figures/Target_Dist.png)
 
 # The Models 
@@ -73,7 +71,7 @@ Overall this model is the most accurate and provides the best performance.
 
 ### Poisson Regressor Model
 
-Generalized Linear Model with a Poisson distribution. The data falls on Poisson distribution and meet all the requirements. The target is a random number of a gained followers over given period of time. Mean absolute percentage error is 219.30, coefficient of determination is 21%. It is lower than 50%, model did not perform well. The remaining 79% of the variability of the dependent variable has not beem accounted for. 
+Generalized Linear Model with a Poisson distribution. The data falls on Poisson distribution and meet all the requirements. The target is a random number of a gained followers over given period of time. Mean absolute percentage error is 219.30, coefficient of determination is 21%. It is lower than 50%, model did not perform well. The remaining 79% of the variability of the dependent variable has not been accounted for. 
 
 
 
@@ -87,6 +85,10 @@ The K-nearest neighbors model uses a distance metric to identify if a new data p
 Random Forest is the final model with the best results. Let's look at the top 5 feature importances and predicted versus true data.
 
 ![image8](reports/figures/RF_5_feature_importances.png)
+
+The number of claims (ClaimNb) is a positive integer (0 included). Thus, this target can be modelled by a Poisson distribution. It is then assumed to be the number of discrete events occuring with a constant rate in a given time interval (Exposure, in units of years). Here we model the frequency y = ClaimNb / Exposure, which is still a (scaled) Poisson distribution, and use Exposure as sample_weight.
+
+
 ![image9](reports/figures/Random_Forest_performances_1.png)
 ![image10](reports/figures/Random_Forest_performances_2.png)
 
