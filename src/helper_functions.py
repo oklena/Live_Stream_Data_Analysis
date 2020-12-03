@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from operator import itemgetter
+from sklearn.ensemble import RandomForestRegressor
 
 def MAPE(y_true, y_pred): 
     """
@@ -28,9 +29,15 @@ def plot_top5_feature_importances(model, data, title):
     Function takes model name
     and plot top 5 feature importances of the model 
     """
-    summary = list(zip(data.columns, model.feature_importances_))
-    summary = sorted(summary, key=itemgetter(1), reverse=True)
-    summary
+    if (type(model) == RandomForestRegressor):
+        summary = list(zip(data.columns, model.feature_importances_))
+        summary = sorted(summary, key=itemgetter(1), reverse=True)
+        summary
+    else:
+        summary = list(zip(data.columns, model.coef_))
+        summary = sorted(summary, key=itemgetter(1), reverse=True)
+        summary
+    
     ylabel = [i[0] for i in summary][:5]
     xlabel = [i[1] for i in summary][:5]
     fig, ax = plt.subplots()
