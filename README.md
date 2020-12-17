@@ -10,7 +10,7 @@ This folder conatains all relevant documentation for the data used in this repo.
 ### [Notebooks](https://github.com/oklena/Live_Stream_Data_Analysis/tree/main/notebooks)
 This folder contains jupyter notebooks with exploratory data analyses and the final report notebook.
 
-### [Data](https://github.com/oklena/Live_Stream_Data_Analysis/tree/main/references)
+### [References](https://github.com/oklena/Live_Stream_Data_Analysis/tree/main/references)
 This folder conatains all relevant references to this repo.
 
 ### [Reports](https://github.com/oklena/Live_Stream_Data_Analysis/tree/main/reports)
